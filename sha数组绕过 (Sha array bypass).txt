@@ -1,0 +1,7 @@
+sha1()函数无法处理数组，
+直接构造如下payload：
+http://120.24.86.145:9009/7.php?name[]=1&password[]=2
+--------------------------------------------------------
+The SHA1 () function cannot handle arrays.
+Directly construct payload as follows:
+Http://120.24.86.145:9009/7.php? Name []= 1 &amp; password []= 2

